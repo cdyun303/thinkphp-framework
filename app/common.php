@@ -103,7 +103,7 @@ function get_ip(): string|null
  * @return string
  * @author cdyun(121625706@qq.com)
  */
-function get_browse($user_agent): string
+function browser($user_agent): string
 {
     if (empty($user_agent)) {
         return 'Unknown';
@@ -134,7 +134,7 @@ function get_browse($user_agent): string
  * @return string
  * @author cdyun(121625706@qq.com)
  */
-function get_os($user_agent): string
+function os($user_agent): string
 {
     if (empty($user_agent)) {
         return 'Unknown';
