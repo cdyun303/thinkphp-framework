@@ -9,12 +9,12 @@ class Request extends \think\Request
      * 系统类型
      * @var string
      */
-    protected string $os;
+    public string $os = '';
 
     /**
      * 浏览器类型
      * @var string
      */
-    protected string $browser;
+    public string $browser = '';
 
 }

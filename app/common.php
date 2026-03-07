@@ -106,7 +106,7 @@ function get_ip(): string|null
 function browser($user_agent): string
 {
     if (empty($user_agent)) {
-        return 'Unknown';
+        return '';
     }
 
     $browserMap = [
@@ -137,7 +137,7 @@ function browser($user_agent): string
 function os($user_agent): string
 {
     if (empty($user_agent)) {
-        return 'Unknown';
+        return '';
     }
 
     $osMap = [
