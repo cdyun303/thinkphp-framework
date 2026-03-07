@@ -9,13 +9,13 @@
 1. **安装项目**
 
 ```bash
-composer create-project cdyun/thinkphp-framework thinkphp
+composer create-project cdyun/thinkphp-framework tp8
 ```
 
 2. **安装依赖**
 
 ```bash
-cd thinkphp
+cd tp8
 
 composer update
 ```
@@ -62,7 +62,7 @@ cp .env.example .env
 ## 目录结构
 
 ```
-thinkphp/                                 部署目录
+tp8/                                      部署目录
 ├── app                                   应用目录
 │   ├── v1                                V1应用
 │   │   ├── controller                    控制器
