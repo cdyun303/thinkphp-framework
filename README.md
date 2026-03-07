@@ -63,20 +63,27 @@ cp .env.example .env
 
 ```
 tp8/                                      部署目录
-├── app                                   应用目录
+├── app                                   多应用目录
 │   ├── v1                                V1应用
-│   │   ├── controller                    控制器
-│   │   ├── model                         模型
-│   │   ├── route                         路由
-│   │   ├── view                          视图
-│   │   └── ...                           其他
+│   │   ├── controller                    控制器目录
+│   │   │   └── V1BaseController.php      V1应用基础控制器
+│   │   ├── model                         模型目录
+│   │   ├── route                         路由目录
+│   │   ├── listener                      事件监听目录
+│   │   ├── view                          视图目录
+│   │   └── ...                           其他目录或文件
 │   │
-│   ├── v2                                V2应用
-│   │   ├── controller                    控制器
-│   │   ├── model                         模型
-│   │   ├── route                         路由
-│   │   ├── view                          视图
-│   │   └── ...                           其他
+│   ├── v2                                V2应用多模块
+│   │   ├── controller                    控制器目录
+│   │   │   ├── core                      Core模块
+│   │   │   ├── ...                       其他模块
+│   │   │   └── V2BaseController.php      V2应用基础控制器
+│   │   ├── model                         模型目录
+│   │   ├── route                         路由目录
+│   │   │   └── v2.php                    路由（注意配置多模块路由）
+│   │   ├── listener                      事件监听目录
+│   │   ├── view                          视图目录
+│   │   └── ...                           其他目录或文件
 │   │
 │   ├── common.php                        全局公共函数文件
 │   ├── event.php                         全局事件定义文件
