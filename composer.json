@@ -1,24 +1,28 @@
 {
-    "name": "topthink/think",
-    "description": "the new thinkphp framework",
+    "name": "cdyun/thinkphp-framework",
     "type": "project",
     "keywords": [
+        "cdyun",
         "framework",
         "thinkphp",
         "ORM"
     ],
-    "homepage": "https://www.thinkphp.cn/",
-    "license": "Apache-2.0",
+    "homepage": "https://github.com/cdyun303/thinkphp-framework",
+    "license": "MIT",
+    "description": "基于 thinkphp 开发脚手架.",
     "authors": [
         {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
-        },
-        {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
+            "name": "cdyun",
+            "email": "121625706@qq.com",
+            "role": "Developer"
         }
     ],
+    "support": {
+        "email": "121625706@qq.com",
+        "issues": "https://github.com/cdyun303/thinkphp-framework/issues",
+        "wiki": "https://doc.thinkphp.cn/v8_0/preface.html",
+        "source": "https://github.com/cdyun303/thinkphp-framework"
+    },
     "require": {
         "php": ">=8.0.0",
         "topthink/framework": "^8.0",

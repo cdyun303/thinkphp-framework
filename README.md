@@ -23,20 +23,20 @@ composer update
 3. **安装常用组件（可选）**
 
 ```bash
-# PHP8.1+ 通用工具包
-composer require cdyun/php-tool
-
-# 请求响应Response扩展、支持加密解密
+# 请求响应Response扩展、支持加密解密（已安装）
 composer require cdyun/thinkphp-response
+
+# 文件上传Upload扩展（已安装）
+composer require cdyun/thinkphp-upload
+
+# 缓存Cache扩展（已安装）
+composer require cdyun/thinkphp-cache
 
 # Swagger扩展
 composer require cdyun/thinkphp-swagger
 
-# 文件上传Upload扩展
-composer require cdyun/thinkphp-upload
-
-# 缓存Cache扩展
-composer require cdyun/thinkphp-cache
+# PHP8.1+ 通用工具包
+composer require cdyun/php-tool
 
 # 视图
 composer require topthink/think-view
