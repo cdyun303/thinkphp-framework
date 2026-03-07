@@ -108,7 +108,7 @@ thinkphp/                                 部署目录
 │
 ├── runtime                               应用的运行时目录，需要可写权限
 ├── vendor                                composer安装的第三方类库目录
-├── support                               全局配置类库目录
+├── support                               全局类库目录
 │   ├── base                              基础类目录
 │   │   ├── BaseController.php            基础控制器类
 │   │   ├── BaseModel.php                 基础模型类
@@ -117,14 +117,16 @@ thinkphp/                                 部署目录
 │   ├── exception                         异常类目录
 │   │   └── AppException.php              自定义异常类
 │   │  
-│   ├── listener                          事件监听类目录
-│   │  
 │   ├── middleware                        中间件类目录
 │   │   └── BrowseCheckMiddleware.php     浏览器类型中间件
 │   │  
-│   ├── AppService.php                    应用服务类
-│   ├── ExceptionHandle.php               异常处理类
-│   └── Request.php                       请求类
+│   ├── listener                          事件监听类目录
+│   │  
+│   ├── ...                               其他全局类库目录
+│   │  
+│   ├── AppService.php                    应用服务类文件
+│   ├── ExceptionHandle.php               异常处理类文件
+│   └── Request.php                       请求类文件
 │
 ├── .env.example                          环境变量示例文件
 ├── LICENSE                               MIT开源协议文件
