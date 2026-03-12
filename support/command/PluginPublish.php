@@ -21,7 +21,6 @@ use think\console\input\Option;
  */
 class PluginPublish extends Command
 {
-
     protected function configure()
     {
         $this->setName('plugin:publish')
@@ -52,7 +51,7 @@ class PluginPublish extends Command
 
                         // 如果目标目录存在且不强制覆盖则跳过
                         if (is_dir($target) && !$force) {
-                            $this->output->info("Dir {$target} exist!");
+                            $this->output->info("Dir {$target} exist! 该应用插件已存在。");
                             continue;
                         }
 
@@ -63,9 +62,11 @@ class PluginPublish extends Command
 
                         $this->copyFolder($source, $target);
                     }
+
+                    // 删除插件，避免更新或下次安装时重复安装
+                    exec('composer remove ' . $package['name']);
                 }
             }
-
             $this->output->writeln('<info>Succeed!</info>');
         }
     }
