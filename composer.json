@@ -9,7 +9,7 @@
     ],
     "homepage": "https://github.com/cdyun303/thinkphp-framework",
     "license": "MIT",
-    "description": "基于 thinkphp 开发脚手架.",
+    "description": "基于 thinkphp 开发脚手架，支持模块插件化。",
     "authors": [
         {
             "name": "cdyun",
