@@ -3,5 +3,7 @@
 
 return [
     // 命令列表
-    'commands' => [],
+    'commands' => [
+        'plugin:publish' => 'support\command\PluginPublish',
+    ],
 ];
