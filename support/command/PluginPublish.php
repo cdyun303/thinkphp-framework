@@ -63,8 +63,6 @@ class PluginPublish extends Command
                         $this->copyFolder($source, $target);
                     }
 
-                    // 删除插件，避免更新或下次安装时重复安装
-                    exec('composer remove ' . $package['name']);
                 }
             }
             $this->output->writeln('<info>Succeed!</info>');
