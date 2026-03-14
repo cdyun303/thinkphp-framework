@@ -26,11 +26,11 @@ composer update
 # 请求响应Response扩展、支持加密解密（已安装）
 composer require cdyun/thinkphp-response
 
-# 文件上传Upload扩展（已安装）
-composer require cdyun/thinkphp-upload
-
 # 缓存Cache扩展（已安装）
 composer require cdyun/thinkphp-cache
+
+# 文件上传Upload扩展
+composer require cdyun/thinkphp-upload
 
 # Swagger扩展
 composer require cdyun/thinkphp-swagger
@@ -47,11 +47,11 @@ composer require topthink/think-captcha
 
 4. **配置环境**
 
-复制 `.env.example` 文件为 `.env` 并修改配置：
+复制 `.example.env` 文件为 `.env` 并修改配置：
 
 ```bash
 # 编辑 .env 文件，设置数据库连接等信息
-cp .env.example .env
+cp .example.env .env
 ```
 
 ### 环境要求
@@ -135,7 +135,7 @@ tp8/                                      部署目录
 │   ├── ExceptionHandle.php               异常处理类文件
 │   └── Request.php                       请求类文件
 │
-├── .env.example                          环境变量示例文件
+├── .example.env                          环境变量示例文件
 ├── LICENSE                               MIT开源协议文件
 ├── README.md                             README.md
 ├── composer.json                         项目依赖配置文件
