@@ -85,7 +85,7 @@ class PluginPublish extends Command
 
         // 创建目标目录（如果不存在）
         if (!is_dir($dst)) {
-            if (!mkdir($dst, 0777, true)) {
+            if (!mkdir($dst, 0755, true)) {
                 return;
             }
         }
@@ -125,7 +125,7 @@ class PluginPublish extends Command
 
                 if ($file->isDir()) {
                     if (!is_dir($dstPath)) {
-                        if (!mkdir($dstPath, 0777, true)) {
+                        if (!mkdir($dstPath, 0755, true)) {
                             return;
                         }
                     }
