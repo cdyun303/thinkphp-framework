@@ -13,15 +13,28 @@ use think\Model;
 
 class BaseModel extends Model
 {
-    /**
-     * 定义软删除字段
-     * @var  string
-     */
-    protected string $deleteTime = 'delete_time';
 
     /**
      * 定义软删除字段的默认值
      * @var int
      */
     protected int $defaultSoftDelete = 0;
+
+    /**
+     * 定义软删除字段
+     * @var  string
+     */
+    protected string $deleteTime = 'delete_at';
+
+    /**
+     * 定义新增字段
+     * @var  string
+     */
+    protected string $createTime = 'create_at';
+
+    /**
+     * 定义更新字段
+     * @var  string
+     */
+    protected string $updateTime = 'update_at';
 }
