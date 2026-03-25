@@ -112,7 +112,7 @@ function browser($user_agent): string
     $browserMap = [
         '/micromessenger/i' => 'WeChat',
         '/alipay/i' => 'Alipay',
-        '/MSIE|Trident/i' => 'MSIE',
+        '/MSIE|Trident/i' => 'IE',
         '/Firefox/i' => 'Firefox',
         '/Chrome/i' => 'Chrome',
         '/Safari/i' => 'Safari',
@@ -153,4 +153,56 @@ function os($user_agent): string
     }
 
     return 'Other';
+}
+
+/**
+ * 应用内链添加或删除域名
+ * @param string $url - 链接地址
+ * @param bool $set - 是否添加域名,true:添加域名,false:删除域名
+ * @param string $domain - 域名
+ * @return string
+ * @author cdyun(121625706@qq.com)
+ */
+function app_domain_url(string $url, bool $set = true, string $domain = ''): string
+{
+    // 添加域名
+    if ($set) {
+        if (str_contains($url, '://') || $url === '') {
+            return $url;
+        }
+        $currentDomain = $domain ?: request()->domain();
+        if (!str_starts_with($url, '/')) {
+            $url = '/' . $url;
+        }
+        return $currentDomain ? $currentDomain . $url : $url;
+    }
+
+    // 删除域名
+    if (!str_contains($url, '://')) {
+        return $url;
+    }
+    $currentDomain = $domain ?: request()->domain();
+    if (!str_contains($currentDomain, '://')) {
+        throw new AppException('提供的域名格式错误');
+    }
+    if (!str_starts_with($url, $currentDomain)) {
+        return $url;
+    }
+    $url = str_replace($currentDomain, '', $url);
+    if (!str_starts_with($url, '/')) {
+        $url = '/' . $url;
+    }
+
+    return $url;
+}
+
+/**
+ * 应用资源签名
+ * @param string $url - 资源地址
+ * @return string
+ * @author cdyun(121625706@qq.com)
+ */
+function app_sign_url(string $url): string
+{
+    return app_domain_url($url, true);
 }

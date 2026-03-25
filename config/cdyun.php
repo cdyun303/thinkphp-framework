@@ -41,9 +41,9 @@ return [
         //上传图片大小
         'imgSize' => 1024,
         //上传文件后缀类型
-        'fileExt' => 'gif,jpg,jpeg,png,mp4,doc,docx,txt,pdf,xls,xlsx,ppt,pptx,mp3,wma,wav,zip',
+        'fileExt' => 'gif,jpg,jpeg,png,webp,doc,docx,txt,pdf,xls,xlsx,ppt,pptx,mp4,flv,mp3,wma,wav,zip',
         //上传图片类型
-        'imgExt' => 'gif,jpg,jpeg,png',
+        'imgExt' => 'gif,jpg,jpeg,png,webp',
         //上传路径,默认为files
         'path' => 'files',
         //驱动模式配置信息
