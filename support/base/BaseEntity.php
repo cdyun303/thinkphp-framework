@@ -89,10 +89,4 @@ class BaseEntity extends Entity
         }
         return $model;
     }
-
-    public function delete(): bool
-    {
-        return $this->getModel()->delete();
-
-    }
 }

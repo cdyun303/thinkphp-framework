@@ -31,9 +31,7 @@
         "topthink/think-multi-app": "^1.1",
         "topthink/think-helper": "^3.1",
         "cdyun/thinkphp-response": "^2.0",
-        "cdyun/thinkphp-cache": "^1.0",
-        "cdyun/php-tool": "^2.0",
-        "cdyun/thinkphp-upload": "^1.0"
+        "cdyun/thinkphp-cache": "^1.0"
     },
     "require-dev": {
         "topthink/think-dumper": "^1.0",
