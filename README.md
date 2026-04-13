@@ -43,6 +43,9 @@ composer require topthink/think-view
 
 # 验证码
 composer require topthink/think-captcha
+
+# 邮件
+composer require symfony/mailer
 ```
 
 4. **配置环境**
