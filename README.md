@@ -136,6 +136,7 @@ tp8/                                      部署目录
 │   └── Request.php                       请求类文件
 │
 ├── .example.env                          环境变量示例文件
+├── fix_perms.sh                          一键修改项目文件夹及文件权限脚本
 ├── LICENSE                               MIT开源协议文件
 ├── README.md                             README.md
 ├── composer.json                         项目依赖配置文件
