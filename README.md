@@ -46,6 +46,9 @@ composer require topthink/think-captcha
 
 # 邮件
 composer require symfony/mailer
+
+# 限流器
+composer require topthink/think-throttle
 ```
 
 4. **配置环境**
